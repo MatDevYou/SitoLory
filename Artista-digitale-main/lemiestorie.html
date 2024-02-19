@@ -17,28 +17,37 @@
             -o-background-size: cover;
             background-size: cover;
         }
+
+       
         .music-platforms {
-            display: flex;
-            justify-content: space-around;
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
             width: 60%;
             background-color: rgba(255, 255, 255, 0.7);
             padding: 20px;
             border-radius: 25px;
         }
+
         .music-platforms div {
             text-align: center;
             transition: transform 0.3s ease;
         }
+
         .music-platforms div:hover {
             transform: scale(1.1);
         }
+
         a {
             color: #007AFF; /* Blue Apple link color */
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
+
         .logo {
             width: 50px; /* Imposta la larghezza del logo */
             height: auto; /* Mantiene le proporzioni dell'immagine */
@@ -62,7 +71,7 @@
 
     <div class="music-platforms">
         <div>
-            <h2><img class="logo" src="../Artista-digitale-main/images/image-gallery-spotify-logo-21.png"Spotify Logo"> Spotify</h2>
+            <h2><img class="logo" src="../Artista-digitale-main/images/image-gallery-spotify-logo-21.png" alt="Spotify Logo"> Spotify</h2>
             <p><a href="https://open.spotify.com/track/...">Ascolta su Spotify</a></p>
         </div>
         <div>
@@ -76,3 +85,4 @@
     </div>
 </body>
 </html>
+
