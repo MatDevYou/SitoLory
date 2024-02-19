@@ -18,7 +18,6 @@
             background-size: cover;
         }
 
-       
         .music-platforms {
             display: flex; 
             flex-direction: column; 
@@ -39,50 +38,57 @@
             transform: scale(1.1);
         }
 
-        a {
-            color: #007AFF; /* Blue Apple link color */
+        .music-platforms a {
+            color: inherit; 
             text-decoration: none;
         }
 
-        a:hover {
-            text-decoration: underline;
+        .music-platforms img {
+            display: block; 
+            margin-bottom: 10px; 
         }
 
-        .logo {
-            width: 50px; /* Imposta la larghezza del logo */
-            height: auto; /* Mantiene le proporzioni dell'immagine */
+        .music-platforms h2 {
+            font-size: 60px; 
         }
+
+        .music-platforms .logo {
+            width: 60px; 
+        }
+
+        @media (max-width: 768px) {
+            .music-platforms {
+                width: 90%; 
+                padding: 40px; 
+            }
+        }
+
     </style>
-    <script>
-        window.onload = function() {
-            var divs = document.querySelectorAll('.music-platforms div');
-            divs.forEach(function(div) {
-                div.addEventListener('mouseover', function() {
-                    this.style.color = '#007AFF'; /* Blue Apple link color */
-                });
-                div.addEventListener('mouseout', function() {
-                    this.style.color = 'black';
-                });
-            });
-        };
-    </script>
+
 </head>
 <body>
 
     <div class="music-platforms">
         <div>
-            <h2><img class="logo" src="../Artista-digitale-main/images/image-gallery-spotify-logo-21.png" alt="Spotify Logo"> Spotify</h2>
-            <p><a href="https://open.spotify.com/track/...">Ascolta su Spotify</a></p>
+            <a href="https://open.spotify.com/track/...">
+                <img class="logo" src="../Artista-digitale-main/images/image-gallery-spotify-logo-21.png" alt="Spotify Logo">
+                <h2>Spotify</h2>
+            </a>
         </div>
         <div>
-            <h2><img class="logo" src="../Artista-digitale-main/images/appleM.png" alt="Apple Music Logo"> Apple Music</h2>
-            <p><a href="https://music.apple.com/it/album/...">Ascolta su Apple Music</a></p>
+            <a href="https://music.apple.com/it/album/...">
+                <img class="logo" src="../Artista-digitale-main/images/appleM.png" alt="Apple Music Logo">
+                <h2>Apple Music</h2>
+            </a>
         </div>
         <div>
-            <h2><img class="logo" src="../Artista-digitale-main/images/youtube-music-logo-7.png" alt="YouTube Music Logo"> YouTube Music</h2>
-            <p><a href="https://music.youtube.com/watch?v=...">Ascolta su YouTube Music</a></p>
+            <a href="https://music.youtube.com/watch?v=...">
+                <img class="logo" src="../Artista-digitale-main/images/youtube-music-logo-7.png" alt="YouTube Music Logo">
+                <h2>YouTube Music</h2>
+            </a>
         </div>
     </div>
 </body>
 </html>
+
 
