@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Le Mie Storie</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('_fc4746c5-0b29-47dc-86a7-f0595d5022a0.jpg') no-repeat center center fixed; 
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        .music-platforms {
+            display: flex;
+            justify-content: space-around;
+            width: 60%;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 20px;
+            border-radius: 25px;
+        }
+        .music-platforms div {
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .music-platforms div:hover {
+            transform: scale(1.1);
+        }
+        a {
+            color: #007AFF; /* Blue Apple link color */
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .logo {
+            width: 50px; /* Imposta la larghezza del logo */
+            height: auto; /* Mantiene le proporzioni dell'immagine */
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            var divs = document.querySelectorAll('.music-platforms div');
+            divs.forEach(function(div) {
+                div.addEventListener('mouseover', function() {
+                    this.style.color = '#007AFF'; /* Blue Apple link color */
+                });
+                div.addEventListener('mouseout', function() {
+                    this.style.color = 'black';
+                });
+            });
+        };
+    </script>
+</head>
+<body>
+    <div class="music-platforms">
+        <div>
+            <h2><img class="logo" src="image-gallery-spotify-logo-21.png" alt="Spotify Logo"> Spotify</h2>
+            <p><a href="">Ascolta su Spotify</a></p>
+        </div>
+        <div>
+            <h2><img class="logo" src="appleM.png" alt="Apple Music Logo"> Apple Music</h2>
+            <p><a href="">Ascolta su Apple Music</a></p>
+        </div>
+        <div>
+            <h2><img class="logo" src="youtube-music-logo-7.png" alt="YouTube Music Logo"> YouTube Music</h2>
+            <p><a href="">Ascolta su YouTube Music</a></p>
+        </div>
+    </div>
+</body>
+</html>
